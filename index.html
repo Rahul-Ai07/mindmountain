@@ -3,1229 +3,1113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MindMountain - India's Premier AI, Banking & Finance, Technology Education Platform">
-    <title>MindMountain - India's Future Skills Platform</title>
+    <title>MindMountain - India's Premier Skills Platform</title>
+    <meta name="description" content="Master AI, Banking, Finance, Technology & Robotics. Join 50,000+ Indian youth with industry-ready education and 95% job placement.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #1e3a8a;
-            --primary-light: #3b5bdb;
-            --secondary: #059669;
-            --accent: #f59e0b;
-            --accent-light: #fbbf24;
-            --text-dark: #0f172a;
-            --text-light: #64748b;
-            --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-            --border: #e2e8f0;
-        }
-
-        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.5;
-            background-color: var(--bg-light);
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #0E0C08;
+            background: #f8f9fa;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        @keyframes glow {
-            0%, 100% { filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.3)); }
-            50% { filter: drop-shadow(0 0 30px rgba(245, 158, 11, 0.5)); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            padding: 0.75rem 2rem;
-            z-index: 1000;
-            animation: slideDown 0.5s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
+        header {
+            background: #0E0C08;
+            color: white;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .logo {
+        .logo-section {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            height: 50px;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
         }
 
-        .logo img {
-            height: 50px;
+        .logo-img {
+            height: 40px;
             width: auto;
-            object-fit: contain;
         }
 
         .logo-text {
-            font-size: 18px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            color: #C8920A;
         }
 
-        .nav-links {
+        nav {
             display: flex;
-            gap: 1.5rem;
-            list-style: none;
+            gap: 2rem;
+            align-items: center;
         }
 
-        .nav-links a {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: color 0.3s ease;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
         }
 
-        .nav-links a:hover { color: var(--secondary); }
+        nav a:hover {
+            color: #C8920A;
+        }
 
-        .nav-cta { display: flex; gap: 0.75rem; }
-
-        .btn {
-            padding: 0.65rem 1.2rem;
-            border-radius: 0.4rem;
-            font-size: 13px;
+        .cta-header {
+            background: #C8920A;
+            color: #0E0C08;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
             border: none;
-            transition: all 0.3s ease;
+        }
+
+        .cta-header:hover {
+            background: #b08009;
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #0f6e56 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .badge {
+            background: rgba(200, 146, 10, 0.3);
+            border: 1px solid #C8920A;
+            border-radius: 20px;
+            padding: 8px 16px;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: #C8920A;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white;
-            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
+            background: #C8920A;
+            color: #0E0C08;
         }
 
         .btn-primary:hover {
+            background: #b08009;
             transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 8px 20px rgba(200, 146, 10, 0.3);
         }
 
-        .btn-accent {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            color: white;
-            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2);
-        }
-
-        .btn-accent:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.3);
-        }
-
-        .btn-outline {
+        .btn-secondary {
             background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
             color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
         }
 
-        /* Hero Section */
-        .hero {
-            padding-top: 7rem;
-            padding-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            min-height: 90vh;
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #059669 100%);
+        .btn-secondary:hover {
+            border-color: #C8920A;
+            background: rgba(200, 146, 10, 0.1);
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.75) 0%, rgba(5, 150, 105, 0.6) 50%, rgba(15, 23, 42, 0.8) 100%);
-            z-index: 0;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0.15) 100%);
-            color: #fbbf24;
-            padding: 0.6rem 1.2rem;
-            border-radius: 2rem;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.8px;
-            animation: fadeInUp 0.6s ease, glow 3s ease-in-out infinite;
-            border: 1px solid rgba(245, 158, 11, 0.4);
-            backdrop-filter: blur(10px);
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.1;
-            color: #ffffff;
-            animation: fadeInUp 0.7s ease;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: none;
-        }
-
-        .hero-description {
-            font-size: 18px;
-            color: #e0e7ff;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            animation: fadeInUp 0.8s ease;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-            font-weight: 500;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.9s ease;
-        }
-
-        .hero-cta .btn {
-            padding: 0.85rem 1.8rem;
-            font-size: 14px;
-            font-weight: 700;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .hero-cta .btn-accent {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: #0f172a;
-            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.35);
-        }
-
-        .hero-cta .btn-accent:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(245, 158, 11, 0.45);
-        }
-
-        .hero-cta .btn-outline {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-cta .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: white;
-        }
-
-        /* Stats Section */
         .stats {
-            background: white;
-            padding: 2rem 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            max-width: 1400px;
-            margin: -2rem auto 0;
-            position: relative;
-            z-index: 10;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .stat-item {
-            text-align: center;
-            animation: fadeInUp 0.8s ease;
+            text-align: left;
         }
 
         .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 28px;
+            font-weight: 700;
+            color: #C8920A;
         }
 
         .stat-label {
-            color: var(--text-light);
             font-size: 12px;
-            margin-top: 0.25rem;
-            font-weight: 600;
+            opacity: 0.9;
         }
 
-        /* Domains Section */
-        .domains {
-            padding: 3.5rem 2rem;
-            background: linear-gradient(135deg, white 0%, #f8fafc 100%);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .section-header h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .section-header p {
-            font-size: 15px;
-            color: var(--text-light);
-        }
-
-        .domains-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .domains-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .domain-card {
-            background: white;
-            padding: 0;
-            border-radius: 0.75rem;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease;
-            position: relative;
+        .hero-video {
+            background: #000;
+            border-radius: 12px;
             overflow: hidden;
-            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
         }
 
-        .domain-image {
+        .hero-video video {
             width: 100%;
-            height: 180px;
-            object-fit: cover;
-            object-position: center;
+            height: auto;
             display: block;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        }
-
-        .domain-content {
-            padding: 1.5rem;
-        }
-
-        .domain-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.12);
-        }
-
-        .domain-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.6rem;
-            color: var(--text-dark);
-        }
-
-        .domain-card p {
-            color: var(--text-light);
-            font-size: 13px;
-            line-height: 1.6;
-        }
-
-        /* Course Cards Section */
-        .courses-section {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
-        }
-
-        .courses-container {
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         .course-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
 
         .course-card {
-            background: white;
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.1);
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease;
+            background: rgba(15, 118, 110, 0.6);
+            border: 1px solid rgba(200, 146, 10, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+            cursor: pointer;
         }
 
         .course-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(30, 58, 138, 0.2);
-            border-color: #f59e0b;
+            border-color: #C8920A;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(200, 146, 10, 0.2);
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
         }
 
         .course-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .course-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 0.5rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .course-meta {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 1rem;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .badge.beginner {
-            background: #d1fae5;
-            color: #065f46;
-        }
-
-        .badge.intermediate {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .badge.advanced {
-            background: #fee2e2;
-            color: #7f1d1d;
-        }
-
-        .course-desc {
-            color: #475569;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .course-card .btn {
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Why Choose Section */
-        .why-choose {
-            padding: 3.5rem 2rem;
-            background: white;
-        }
-
-        .why-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .why-content {
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .why-content h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.25rem;
-            color: var(--text-dark);
-        }
-
-        .why-point {
-            display: flex;
-            gap: 0.75rem;
-            margin-bottom: 1.25rem;
-            align-items: flex-start;
-        }
-
-        .why-check {
-            width: 24px;
-            height: 24px;
-            background: var(--secondary);
+            width: 40px;
+            height: 40px;
+            background: #C8920A;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 13px;
-            flex-shrink: 0;
-            margin-top: 1px;
-            font-weight: 700;
+            font-size: 20px;
         }
 
-        .why-text h4 {
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .why-text p {
-            color: var(--text-light);
-            font-size: 13px;
-            line-height: 1.5;
-        }
-
-        .why-visual {
-            border-radius: 1rem;
-            height: 350px;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease;
-            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        }
-
-        .why-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        /* Skills Grid */
-        .skills {
-            padding: 3.5rem 2rem;
-            background: linear-gradient(135deg, #f8fafc 0%, white 100%);
-        }
-
-        .skills-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0.6rem;
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-            border-color: var(--accent);
-        }
-
-        .skill-emoji {
-            font-size: 40px;
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-
-        .skill-card h4 {
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-            color: var(--text-dark);
-        }
-
-        .skill-card p {
-            font-size: 12px;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 3.5rem 2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, #2d5a96 100%);
-            color: white;
-        }
-
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .testimonials-header h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .testimonial-card:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: translateY(-4px);
-        }
-
-        .testimonial-stars {
-            margin-bottom: 0.75rem;
-            font-size: 13px;
-        }
-
-        .testimonial-text {
-            font-size: 13px;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        .testimonial-author {
+        .course-title {
             font-weight: 600;
-            font-size: 12px;
+            font-size: 14px;
         }
 
-        /* Pricing */
-        .pricing {
-            padding: 3.5rem 2rem;
-            background: white;
+        .course-meta {
+            font-size: 11px;
+            opacity: 0.7;
         }
 
-        .pricing-container {
+        .course-desc {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .counter {
+            background: rgba(200, 146, 10, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #C8920A;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0E0C08;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 3rem;
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .domain-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .domain-card:hover {
+            border-color: #C8920A;
+            box-shadow: 0 8px 24px rgba(200, 146, 10, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .domain-icon {
+            font-size: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .domain-card h3 {
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+            color: #0E0C08;
+        }
+
+        .domain-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #C8920A;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+            color: #0E0C08;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            border-color: #C8920A;
+            box-shadow: 0 4px 12px rgba(200, 146, 10, 0.15);
+        }
+
+        .skill-icon {
+            font-size: 32px;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-item h5 {
+            font-size: 14px;
+            color: #0E0C08;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .stars {
+            color: #FFB800;
+            font-size: 13px;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #0E0C08;
+            font-size: 13px;
+        }
+
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .pricing-card {
             background: white;
-            border: 2px solid var(--border);
-            padding: 2rem;
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
             position: relative;
-            animation: fadeInUp 0.8s ease;
         }
 
         .pricing-card.featured {
-            border-color: var(--accent);
-            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.12);
+            border-color: #C8920A;
+            box-shadow: 0 12px 32px rgba(200, 146, 10, 0.2);
             transform: scale(1.05);
         }
 
-        .pricing-card.featured::before {
-            content: 'POPULAR';
+        .pricing-badge {
+            background: #C8920A;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
             position: absolute;
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--accent);
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 2rem;
-            font-size: 11px;
+        }
+
+        .pricing-name {
+            font-size: 20px;
             font-weight: 700;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-4px);
-        }
-
-        .pricing-header h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .pricing-amount {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 0.3rem;
-        }
-
-        .pricing-frequency {
-            color: var(--text-light);
-            font-size: 12px;
             margin-bottom: 1rem;
+            color: #0E0C08;
+        }
+
+        .pricing-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #C8920A;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 1.5rem;
         }
 
         .pricing-features {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            list-style: none;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #2d9f4c;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+        }
+
+        .instructors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .instructor {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .instructor:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .instructor-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a3a52 0%, #0f6e56 100%);
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            margin-bottom: 1.5rem;
-            flex: 1;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .instructor-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: #0E0C08;
+            margin-bottom: 0.3rem;
+        }
+
+        .instructor-role {
             font-size: 12px;
-        }
-
-        .pricing-feature {
-            display: flex;
-            gap: 0.5rem;
-            color: var(--text-light);
-        }
-
-        .pricing-feature span {
-            color: var(--secondary);
+            color: #C8920A;
             font-weight: 600;
         }
 
-        /* CTA Section */
-        .final-cta {
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, var(--secondary) 0%, #0d9488 100%);
+        .instructor-company {
+            font-size: 11px;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .modal-header {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #0E0C08;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 28px;
+            cursor: pointer;
+            color: #999;
+            border: none;
+            background: none;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 13px;
+            color: #0E0C08;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #C8920A;
+            box-shadow: 0 0 8px rgba(200, 146, 10, 0.2);
+        }
+
+        .quiz-container {
+            background: linear-gradient(135deg, #1a3a52 0%, #0f6e56 100%);
             color: white;
-            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
         }
 
-        .cta-content {
-            max-width: 600px;
-            margin: 0 auto;
-            animation: fadeInUp 0.8s ease;
+        .quiz-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
-        .final-cta h2 {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
+        .quiz-options {
+            display: grid;
+            gap: 0.8rem;
         }
 
-        .final-cta p {
-            font-size: 15px;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-            line-height: 1.6;
+        .quiz-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(200, 146, 10, 0.3);
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
         }
 
-        /* Footer */
+        .quiz-option:hover {
+            background: rgba(200, 146, 10, 0.2);
+            border-color: #C8920A;
+        }
+
         footer {
-            background: var(--text-dark);
+            background: #0E0C08;
             color: white;
-            padding: 2.5rem 2rem;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .footer-section h4 {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.75rem;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            color: #C8920A;
+            margin-bottom: 1rem;
+            font-size: 14px;
         }
 
         .footer-section a {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 12px;
-            transition: color 0.3s ease;
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #C8920A;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 1.5rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
+            border-top: 1px solid rgba(200, 146, 10, 0.3);
+            padding-top: 2rem;
+            font-size: 13px;
+            color: #999;
         }
 
-        /* Responsive */
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(200, 146, 10, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C8920A;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .social-link:hover {
+            background: #C8920A;
+            color: #0E0C08;
+        }
+
         @media (max-width: 768px) {
             .hero-container {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            nav {
+                gap: 1rem;
+                font-size: 12px;
             }
 
-            .why-container {
-                grid-template-columns: 1fr;
+            h1 {
+                font-size: 32px;
             }
 
-            .nav-links {
-                display: none;
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
             }
 
             .pricing-card.featured {
                 transform: scale(1);
             }
 
-            .pricing-card.featured:hover {
-                transform: translateY(-4px);
+            .section-title {
+                font-size: 24px;
             }
 
-            .stats {
-                margin: -1rem 1rem 0;
+            .modal-content {
+                width: 95%;
+                max-width: 100%;
             }
 
-            /* Mobile CTA Buttons */
-            .hero-cta {
-                display: flex;
+            .instructor-avatar {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            header {
                 flex-direction: column;
-                gap: 0.75rem;
+                gap: 1rem;
+            }
+
+            nav {
                 width: 100%;
-            }
-
-            .hero-cta .btn {
-                width: 100%;
-                padding: 14px 20px;
-                font-size: 16px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            button {
-                width: 100%;
-            }
-
-            .sticky-cta {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                z-index: 100;
-                background: white;
-                padding: 1rem;
-                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-                display: flex;
-                gap: 0.5rem;
-            }
-
-            .sticky-cta button {
-                flex: 1;
-                padding: 12px;
-            }
-
-            .course-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
+                justify-content: center;
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="images/mindmountain_logo.png" alt="MindMountain Logo">
-                <span class="logo-text">MindMountain</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#domains">Domains</a></li>
-                <li><a href="#testimonials">Success Stories</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-            <div class="nav-cta">
-                <button class="btn btn-outline">Sign In</button>
-                <button class="btn btn-primary">Start Free</button>
-            </div>
-        </div>
-    </nav>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo-section">
+            <img src="images/mindmountain_logo.png" alt="MindMountain" class="logo-img">
+            <span class="logo-text">MindMountain</span>
+        </a>
+        <nav>
+            <a href="#domains">Courses</a>
+            <a href="#testimonials">Success Stories</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#" onclick="openSignup(event)" class="cta-header">Start Free →</a>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">🇮🇳 EMPOWERING INDIA'S YOUTH</div>
+                <h1>Climb to <span class="highlight">Success</span> with Tech Skills</h1>
+                <p>Master AI, Banking, Finance, Technology & Robotics. Join 50,000+ Indian youth transforming their careers with world-class education.</p>
+
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="openSignup(event)">Start Free Trial</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">Take Quiz →</button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Students Active</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Job Placement</div>
+                    </div>
+                </div>
+
+                <div class="counter">
+                    ⚡ <span id="counter">12</span> students enrolled in the last 2 hours
+                </div>
+            </div>
+
             <div>
-                <div class="hero-tag">🇮🇳 EMPOWERING INDIA'S YOUTH</div>
-                <h1>Climb to <span>Success</span> with AI & Finance Skills</h1>
-                <p class="hero-description">Master AI, Banking, Finance, Technology & Robotics. Join 50,000+ Indian youth transforming their careers with world-class education.</p>
-                <div class="hero-cta">
-                    <button class="btn btn-accent">Start Free Trial</button>
-                    <button class="btn btn-outline">Explore Courses</button>
+                <!-- Embedded 30-Second Video with Suno Audio -->
+                <div class="hero-video">
+                    <video controls width="100%">
+                        <source src="videos/output.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-icon">💡</div>
+                            <div>
+                                <div class="course-title">AI Fundamentals</div>
+                                <div class="course-meta">8 weeks • Beginner</div>
+                            </div>
+                        </div>
+                        <div class="course-desc">Master AI basics and machine learning fundamentals from industry experts.</div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-icon">💰</div>
+                            <div>
+                                <div class="course-title">Banking & Finance</div>
+                                <div class="course-meta">10 weeks • Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="course-desc">Learn financial markets and banking operations with live trading simulations.</div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-icon">🤖</div>
+                            <div>
+                                <div class="course-title">Robotics & Automation</div>
+                                <div class="course-meta">12 weeks • Advanced</div>
+                            </div>
+                        </div>
+                        <div class="course-desc">Build and program intelligent robotic systems with real-world projects.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section style="padding: 4rem 2rem; background: #000; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 2rem; font-weight: 800; font-family: 'Poppins', sans-serif;">Watch Our Story</h2>
-            <video width="100%" style="max-width: 1200px; border-radius: 1rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5);" controls>
-                <source src="videos/output.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p style="color: #999; margin-top: 1.5rem; font-size: 14px;">90-second promotional video • 1920×1080 • H.264</p>
-        </div>
-    </section>
-
-    <!-- Course Cards Section -->
-    <section class="courses-section">
-        <div class="courses-container">
-            <h2 style="text-align: center; margin-bottom: 2rem; color: #1e3a8a; font-size: 2.5rem; font-weight: 800;">Featured Courses</h2>
-            <div class="course-cards">
-                <div class="course-card">
-                    <div class="course-icon">💡</div>
-                    <h3 class="course-title">AI Fundamentals</h3>
-                    <p class="course-meta">8 weeks • <span class="badge beginner">Beginner</span></p>
-                    <p class="course-desc">Master AI basics and machine learning fundamentals</p>
-                    <button class="btn btn-primary" onclick="alert('AI Fundamentals course coming soon!')">View Course</button>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon">💰</div>
-                    <h3 class="course-title">Banking & Finance</h3>
-                    <p class="course-meta">10 weeks • <span class="badge intermediate">Intermediate</span></p>
-                    <p class="course-desc">Learn financial markets and banking operations</p>
-                    <button class="btn btn-primary" onclick="alert('Banking & Finance course coming soon!')">View Course</button>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon">🤖</div>
-                    <h3 class="course-title">Robotics</h3>
-                    <p class="course-meta">12 weeks • <span class="badge advanced">Advanced</span></p>
-                    <p class="course-desc">Build and program intelligent robotic systems</p>
-                    <button class="btn btn-primary" onclick="alert('Robotics course coming soon!')">View Course</button>
-                </div>
+    <!-- Quiz Section -->
+    <section id="quiz" class="container" style="padding: 3rem 0;">
+        <div class="quiz-container">
+            <div class="quiz-title">🎯 Find Your Perfect Course in 60 Seconds</div>
+            <div class="quiz-options">
+                <div class="quiz-option" onclick="selectQuiz('AI')">💡 I want to master AI & Machine Learning</div>
+                <div class="quiz-option" onclick="selectQuiz('Finance')">💰 I'm interested in Banking & Finance</div>
+                <div class="quiz-option" onclick="selectQuiz('Robotics')">🤖 I want to build Robotics & Automation</div>
+                <div class="quiz-option" onclick="selectQuiz('Data')">📊 I want to become a Data Scientist</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stat-item">
-            <div class="stat-number">50K+</div>
-            <div class="stat-label">Indian Youth</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Expert Courses</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">95%</div>
-            <div class="stat-label">Job Placement</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Support</div>
+            <div id="quizResult" style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; display: none;"></div>
         </div>
     </section>
 
     <!-- Domains Section -->
-    <section class="domains" id="domains">
-        <div class="domains-container">
-            <div class="section-header">
-                <h2>Upskill in High-Demand Domains</h2>
-                <p>Industry-ready education in India's fastest-growing tech sectors</p>
-            </div>
+    <section id="domains">
+        <div class="container">
+            <h2 class="section-title">Upskill in High-Demand Domains</h2>
+            <p class="section-subtitle">Industry-ready education in India's fastest-growing tech sectors</p>
+
             <div class="domains-grid">
                 <div class="domain-card">
-                    <img src="images/AI.avif" alt="Artificial Intelligence" class="domain-image">
-                    <div class="domain-content">
-                        <h3>Artificial Intelligence</h3>
-                        <p>Machine Learning, Deep Learning, NLP, Computer Vision & AI Applications</p>
-                    </div>
+                    <div class="domain-icon">🤖</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Machine Learning, Deep Learning, NLP, Computer Vision & AI Applications</p>
                 </div>
                 <div class="domain-card">
-                    <img src="images/banking.avif" alt="Banking & Finance" class="domain-image">
-                    <div class="domain-content">
-                        <h3>Banking & Finance</h3>
-                        <p>Digital Banking, Fintech, Investment Banking & Financial Analysis</p>
-                    </div>
+                    <div class="domain-icon">💰</div>
+                    <h3>Banking & Finance</h3>
+                    <p>Digital Banking, Fintech, Investment Banking & Financial Analysis</p>
                 </div>
                 <div class="domain-card">
-                    <img src="images/cloude.webp" alt="Cloud Technology" class="domain-image">
-                    <div class="domain-content">
-                        <h3>Technology & Dev</h3>
-                        <p>Web Development, Cloud Computing, DevOps & Cybersecurity</p>
-                    </div>
+                    <div class="domain-icon">☁️</div>
+                    <h3>Technology & Dev</h3>
+                    <p>Web Development, Cloud Computing, DevOps & Cybersecurity</p>
                 </div>
                 <div class="domain-card">
-                    <img src="images/ROBOTICS.avif" alt="Robotics" class="domain-image">
-                    <div class="domain-content">
-                        <h3>Robotic Science</h3>
-                        <p>Robotics, Automation, IoT & Intelligent Systems</p>
-                    </div>
+                    <div class="domain-icon">⚙️</div>
+                    <h3>Robotic Science</h3>
+                    <p>Robotics, Automation, IoT & Intelligent Systems</p>
                 </div>
                 <div class="domain-card">
-                    <img src="images/data%20sc.avif" alt="Data Science" class="domain-image">
-                    <div class="domain-content">
-                        <h3>Data Science</h3>
-                        <p>Analytics, Big Data, Python & Advanced Statistics</p>
-                    </div>
+                    <div class="domain-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Analytics, Big Data, Python & Advanced Statistics</p>
                 </div>
                 <div class="domain-card">
-                    <img src="images/cyber%20sec.avif" alt="Cybersecurity" class="domain-image">
-                    <div class="domain-content">
-                        <h3>Cybersecurity</h3>
-                        <p>Ethical Hacking, Network Security & Compliance</p>
-                    </div>
+                    <div class="domain-icon">🔐</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Ethical Hacking, Network Security & Compliance</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose -->
-    <section class="why-choose">
-        <div class="why-container">
-            <div class="why-content">
-                <h2>Why Choose MindMountain?</h2>
-                <div class="why-point">
-                    <div class="why-check">✓</div>
-                    <div class="why-text">
-                        <h4>Industry Experts Teaching</h4>
-                        <p>Learn directly from professionals working at top tech & finance companies</p>
-                    </div>
+    <!-- Why Choose Section -->
+    <section style="background: #f5f5f5;">
+        <div class="container">
+            <h2 class="section-title">Why Choose MindMountain?</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h4>Industry Experts Teaching</h4>
+                    <p>Learn directly from professionals working at top tech & finance companies like Google, Microsoft, Goldman Sachs</p>
                 </div>
-                <div class="why-point">
-                    <div class="why-check">✓</div>
-                    <div class="why-text">
-                        <h4>Job Guarantee Programs</h4>
-                        <p>95% placement rate with partner companies in India & internationally</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h4>Job Guarantee Programs</h4>
+                    <p>95% placement rate with partner companies in India & internationally. We ensure your success.</p>
                 </div>
-                <div class="why-point">
-                    <div class="why-check">✓</div>
-                    <div class="why-text">
-                        <h4>Hands-On Projects</h4>
-                        <p>Real-world projects & live case studies you can showcase to employers</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h4>Hands-On Projects</h4>
+                    <p>Real-world projects & live case studies you can showcase to employers and build your portfolio.</p>
                 </div>
-                <div class="why-point">
-                    <div class="why-check">✓</div>
-                    <div class="why-text">
-                        <h4>Affordable Education</h4>
-                        <p>World-class courses at prices designed for Indian students</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💵</div>
+                    <h4>Affordable Education</h4>
+                    <p>World-class courses at prices designed for Indian students. Start from just ₹499/month</p>
                 </div>
-                <div class="why-point">
-                    <div class="why-check">✓</div>
-                    <div class="why-text">
-                        <h4>Lifetime Access</h4>
-                        <p>Learn at your pace with permanent access to all course materials</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♾️</div>
+                    <h4>Lifetime Access</h4>
+                    <p>Learn at your pace with permanent access to all course materials and future updates.</p>
                 </div>
-            </div>
-            <div class="why-visual">
-                <img src="images/premium_photo-1688645554172-d3aef5f837ce.avif" alt="Professional Success" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="feature-card">
+                    <div class="feature-icon">24/7</div>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated mentor support, community forum, and email assistance whenever you need help.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Grid -->
-    <section class="skills">
-        <div class="skills-container">
-            <div class="section-header">
-                <h2>Master In-Demand Skills</h2>
-                <p>Certifications recognized by industry leaders</p>
-            </div>
+    <!-- Skills Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Master In-Demand Skills</h2>
+            <p class="section-subtitle">Certifications recognized by industry leaders</p>
+
             <div class="skills-grid">
-                <div class="skill-card">
-                    <span class="skill-emoji">🧠</span>
-                    <h4>Machine Learning</h4>
-                    <p>Build intelligent models that learn from data</p>
+                <div class="skill-item">
+                    <div class="skill-icon">🧠</div>
+                    <h5>Machine Learning</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">📈</span>
-                    <h4>Financial Analysis</h4>
-                    <p>Master investment strategies & market analysis</p>
+                <div class="skill-item">
+                    <div class="skill-icon">📈</div>
+                    <h5>Financial Analysis</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">☁️</span>
-                    <h4>Cloud Computing</h4>
-                    <p>AWS, Azure, Google Cloud expertise</p>
+                <div class="skill-item">
+                    <div class="skill-icon">☁️</div>
+                    <h5>Cloud Computing</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">🔗</span>
-                    <h4>Blockchain</h4>
-                    <p>Cryptocurrency & Smart Contract development</p>
+                <div class="skill-item">
+                    <div class="skill-icon">🔗</div>
+                    <h5>Blockchain</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">🤖</span>
-                    <h4>Automation</h4>
-                    <p>RPA & intelligent process automation</p>
+                <div class="skill-item">
+                    <div class="skill-icon">🤖</div>
+                    <h5>Automation</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">🎮</span>
-                    <h4>Game Development</h4>
-                    <p>Unity & game engineering fundamentals</p>
+                <div class="skill-item">
+                    <div class="skill-icon">🎮</div>
+                    <h5>Game Development</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">📱</span>
-                    <h4>Mobile Dev</h4>
-                    <p>iOS, Android & cross-platform development</p>
+                <div class="skill-item">
+                    <div class="skill-icon">📱</div>
+                    <h5>Mobile Development</h5>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-emoji">🎤</span>
-                    <h4>AI Voice & NLP</h4>
-                    <p>Natural language processing & voice AI</p>
+                <div class="skill-item">
+                    <div class="skill-icon">🎤</div>
+                    <h5>AI Voice & NLP</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section style="background: #f5f5f5;">
+        <div class="container">
+            <h2 class="section-title">Learn from Industry Leaders</h2>
+            <p class="section-subtitle">Expert instructors with 10+ years of experience</p>
+
+            <div class="instructors">
+                <div class="instructor">
+                    <div class="instructor-avatar">👨‍💼</div>
+                    <div class="instructor-name">Rajesh Kumar</div>
+                    <div class="instructor-role">AI Engineer</div>
+                    <div class="instructor-company">Google India</div>
+                </div>
+                <div class="instructor">
+                    <div class="instructor-avatar">👩‍💼</div>
+                    <div class="instructor-name">Priya Sharma</div>
+                    <div class="instructor-role">Finance Expert</div>
+                    <div class="instructor-company">Goldman Sachs</div>
+                </div>
+                <div class="instructor">
+                    <div class="instructor-avatar">👨‍💻</div>
+                    <div class="instructor-name">Arjun Patel</div>
+                    <div class="instructor-role">Cloud Architect</div>
+                    <div class="instructor-company">Microsoft Azure</div>
+                </div>
+                <div class="instructor">
+                    <div class="instructor-avatar">👩‍🔬</div>
+                    <div class="instructor-name">Neha Singh</div>
+                    <div class="instructor-role">Robotics Specialist</div>
+                    <div class="instructor-company">Boston Robotics</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="testimonials-container">
-            <div class="testimonials-header">
-                <h2>Success Stories from India</h2>
-                <p>Real results from real students</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Changed my career in 3 months. Got placed at a leading fintech company earning 2x more than before!"</p>
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories from India</h2>
+            <p class="section-subtitle">Real results from real students</p>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Changed my career in 3 months. Got placed at a leading fintech company earning 2x more than before!"</div>
                     <div class="testimonial-author">— Priya, Mumbai</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The AI course taught me practical skills. Now I'm freelancing and earning ₹50K+ monthly!"</p>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"The AI course taught me practical skills. Now I'm freelancing and earning ₹50K+ monthly!"</div>
                     <div class="testimonial-author">— Arjun, Bangalore</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Outstanding mentorship & project-based learning. MindMountain is a game-changer for Indian youth!"</p>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Outstanding mentorship & project-based learning. MindMountain is a game-changer!"</div>
                     <div class="testimonial-author">— Ananya, Delhi</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Finance course was exactly what I needed. Now working at Google as a Data Analyst!"</p>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Finance course was exactly what I needed. Now working at Google as a Data Analyst!"</div>
                     <div class="testimonial-author">— Rohan, Hyderabad</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Best investment for my future. Got certified in robotics and landed my dream job!"</p>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Best investment for my future. Got certified in robotics and landed my dream job!"</div>
                     <div class="testimonial-author">— Neha, Chennai</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Affordable, comprehensive, and industry-relevant. MindMountain gave me the skills India needs!"</p>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Affordable, comprehensive, and industry-relevant. MindMountain gave me the skills!"</div>
                     <div class="testimonial-author">— Vikram, Pune</div>
                 </div>
             </div>
@@ -1233,161 +1117,204 @@
     </section>
 
     <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="pricing-container">
-            <div class="section-header">
-                <h2>Flexible Pricing for Every Student</h2>
-                <p>Designed for Indian students & professionals</p>
-            </div>
+    <section id="pricing" style="background: #f5f5f5;">
+        <div class="container">
+            <h2 class="section-title">Flexible Pricing Plans</h2>
+            <p class="section-subtitle">Choose the plan that fits your learning goals</p>
+
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                    </div>
-                    <div class="pricing-amount">₹499<span style="font-size: 0.5em; color: var(--text-light);">/mo</span></div>
-                    <div class="pricing-frequency">Perfect for beginners</div>
+                    <div class="pricing-name">Starter</div>
+                    <div class="pricing-price">₹499</div>
+                    <div class="pricing-period">per month</div>
                     <div class="pricing-features">
-                        <div class="pricing-feature"><span>✓</span> 50+ courses</div>
-                        <div class="pricing-feature"><span>✓</span> Progress tracking</div>
-                        <div class="pricing-feature"><span>✓</span> Community access</div>
-                        <div class="pricing-feature"><span>✓</span> Certificates</div>
+                        <li>50+ courses</li>
+                        <li>Progress tracking</li>
+                        <li>Community access</li>
+                        <li>Basic certificates</li>
+                        <li>Email support</li>
                     </div>
-                    <button class="btn btn-outline" style="width: 100%;">Get Started</button>
+                    <button class="btn btn-secondary" onclick="openSignup(event)">Get Started</button>
                 </div>
+
                 <div class="pricing-card featured">
-                    <div class="pricing-header">
-                        <h3>Professional</h3>
-                    </div>
-                    <div class="pricing-amount">₹2,999<span style="font-size: 0.5em; color: var(--text-light);">/year</span></div>
-                    <div class="pricing-frequency">Best value - Save ₹5,988</div>
+                    <div class="pricing-badge">Best Value</div>
+                    <div class="pricing-name">Professional</div>
+                    <div class="pricing-price">₹2,999</div>
+                    <div class="pricing-period">per year</div>
                     <div class="pricing-features">
-                        <div class="pricing-feature"><span>✓</span> All courses</div>
-                        <div class="pricing-feature"><span>✓</span> 1-on-1 mentorship</div>
-                        <div class="pricing-feature"><span>✓</span> Live projects</div>
-                        <div class="pricing-feature"><span>✓</span> Lifetime updates</div>
-                        <div class="pricing-feature"><span>✓</span> Job guarantee</div>
+                        <li>All 500+ courses</li>
+                        <li>1-on-1 mentorship</li>
+                        <li>Live projects</li>
+                        <li>95% Job guarantee</li>
+                        <li>Industry certificates</li>
+                        <li>Priority 24/7 support</li>
+                        <li>Lifetime updates</li>
                     </div>
-                    <button class="btn btn-accent" style="width: 100%;">Start Free Trial</button>
+                    <button class="btn btn-primary" onclick="openSignup(event)">Start Free Trial</button>
                 </div>
+
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                    </div>
-                    <div class="pricing-amount">Custom</div>
-                    <div class="pricing-frequency">For organizations</div>
+                    <div class="pricing-name">Enterprise</div>
+                    <div class="pricing-price">Custom</div>
+                    <div class="pricing-period">for organizations</div>
                     <div class="pricing-features">
-                        <div class="pricing-feature"><span>✓</span> Custom programs</div>
-                        <div class="pricing-feature"><span>✓</span> Team dashboard</div>
-                        <div class="pricing-feature"><span>✓</span> Bulk discounts</div>
-                        <div class="pricing-feature"><span>✓</span> Dedicated support</div>
+                        <li>Custom programs</li>
+                        <li>Team dashboard</li>
+                        <li>Bulk discounts</li>
+                        <li>Dedicated support</li>
+                        <li>Corporate training</li>
                     </div>
-                    <button class="btn btn-outline" style="width: 100%;">Schedule Demo</button>
+                    <button class="btn btn-secondary" onclick="scheduleDemo()">Schedule Demo</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="cta-content">
-            <h2>Ready to Scale Your Career?</h2>
-            <p>Join thousands of Indian youth mastering AI, Finance & Technology skills. Your success story starts here.</p>
-            <button class="btn btn-accent">Start Your Free Trial Today</button>
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, #1a3a52 0%, #0f6e56 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Ready to Scale Your Career?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Join 50,000+ Indian youth mastering AI, Finance & Technology skills. Your success story starts here.</p>
+            <button class="btn btn-primary" onclick="openSignup(event)" style="font-size: 16px; padding: 14px 32px;">Start Your Free Trial Today</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Platform</h4>
-                    <ul>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Platform</h4>
+                <a href="#domains">Courses</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#">Security</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 MindMountain India. Empowering the next generation of tech leaders. 🇮🇳</p>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
             </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Contact</a>
+                <a href="#">FAQ</a>
+                <a href="#">Help Center</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">▶</a>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 MindMountain India. Empowering the next generation of tech leaders. 🇮🇳<br>
+            All rights reserved | Trusted by 50,000+ Indian youth
         </div>
     </footer>
 
+    <!-- Email Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-header">Start Your Free Trial 🚀</div>
+            <div style="margin-bottom: 1.5rem; color: #666; font-size: 13px;">No credit card required. Access all courses immediately.</div>
+
+            <form onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                </div>
+                <div class="form-group">
+                    <label>Select Course Interest</label>
+                    <select required>
+                        <option value="">Choose a course...</option>
+                        <option>AI & Machine Learning</option>
+                        <option>Banking & Finance</option>
+                        <option>Robotics & Automation</option>
+                        <option>Data Science</option>
+                        <option>Cloud Technology</option>
+                        <option>Cybersecurity</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Unlock Free Access Now</button>
+            </form>
+
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; text-align: center; font-size: 12px; color: #999;">
+                ✓ Free lifetime access to starter courses<br>✓ Money-back guarantee if not satisfied<br>✓ Join our community of 50,000+ learners
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Button click handlers
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const buttonText = this.textContent.trim();
+        // Signup Modal
+        function openSignup(e) {
+            e.preventDefault();
+            document.getElementById('signupModal').classList.add('active');
+        }
 
-                if (buttonText.includes('Free') || buttonText.includes('Trial')) {
-                    alert('🎉 Start your free trial! Redirecting to signup...\n\nIn production, this would link to: /signup');
-                } else if (buttonText.includes('Sign In')) {
-                    alert('👤 Redirecting to login...\n\nIn production, this would link to: /login');
-                } else if (buttonText.includes('Explore') || buttonText.includes('Courses')) {
-                    alert('📚 Exploring courses...\n\nIn production, this would show the courses page');
-                    const coursesSection = document.querySelector('#domains');
-                    if (coursesSection) coursesSection.scrollIntoView({ behavior: 'smooth' });
-                } else if (buttonText.includes('Schedule') || buttonText.includes('Demo')) {
-                    alert('📅 Scheduling demo...\n\nIn production, this would open a calendar tool');
-                }
-            });
-        });
+        function closeModal() {
+            document.getElementById('signupModal').classList.remove('active');
+        }
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
+        function handleSignup(e) {
+            e.preventDefault();
+            alert('🎉 Welcome to MindMountain!\n\nCheck your email for your free trial link.\n\nYou can now access:\n✓ 50+ starter courses\n✓ Live AI workshop\n✓ Community access\n\nHappy learning!');
+            closeModal();
+        }
 
-        // Show/hide sticky CTA based on screen size
-        function updateStickyCTA() {
-            const stickyCTA = document.querySelector('.sticky-cta');
-            if (window.innerWidth <= 768) {
-                if (stickyCTA) stickyCTA.style.display = 'flex';
-            } else {
-                if (stickyCTA) stickyCTA.style.display = 'none';
+        // Quiz
+        function selectQuiz(course) {
+            const result = document.getElementById('quizResult');
+            const courses = {
+                'AI': '🤖 AI Fundamentals (8 weeks) - Start mastering machine learning today!',
+                'Finance': '💰 Banking & Finance (10 weeks) - Become a financial expert!',
+                'Robotics': '⚙️ Robotics & Automation (12 weeks) - Build intelligent systems!',
+                'Data': '📊 Data Science Masterclass (10 weeks) - Unlock insights with data!'
+            };
+
+            result.innerHTML = `<strong>Perfect match:</strong> ${courses[course]}<br><br><button class="btn btn-primary" onclick="openSignup(event)" style="margin-top: 1rem;">Enroll Now (Free Trial)</button>`;
+            result.style.display = 'block';
+            result.scrollIntoView({behavior: 'smooth'});
+        }
+
+        // Live Counter
+        function updateCounter() {
+            const counter = Math.floor(Math.random() * 20) + 8;
+            document.getElementById('counter').innerText = counter;
+        }
+
+        setInterval(updateCounter, 3000);
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('signupModal');
+            if (event.target === modal) {
+                closeModal();
             }
         }
 
-        window.addEventListener('resize', updateStickyCTA);
-        window.addEventListener('load', updateStickyCTA);
+        // Schedule Demo
+        function scheduleDemo() {
+            alert('📅 Enterprise Demo Scheduled!\n\nOur team will contact you shortly to discuss:\n✓ Custom curriculum\n✓ Bulk licensing\n✓ Team dashboard\n✓ ROI & success stories\n\nExpect a call within 24 hours!');
+        }
     </script>
-
-    <!-- Sticky Mobile CTA -->
-    <div class="sticky-cta" style="display: none;">
-        <button class="btn btn-accent" onclick="alert('🎉 Start your free trial!')">Start Free Trial</button>
-        <button class="btn btn-outline" onclick="alert('📚 Explore our courses!')">Explore Courses</button>
-    </div>
 </body>
 </html>
